@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>PinkDiamond usage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PinkDiamond How to use English</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #5d6472;
+      color: white;
+    }
+
+    .tab-header {
+      width: 100%;
+      display: table;
+      background-color: #333;
+      table-layout: fixed;
+    }
+
+    .tab-button {
+      display: table-cell;
+      padding: 15px;
+      background-color: #444;
+      border: none;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .tab-button.active {
+      background-color: #2C9435;
+    }
+
+    .container {
+      display: table;
+      width: 100%;
+      height: 500px;
+      table-layout: fixed;
+    }
+
+    .left-panel {
+      display: none;
+      background-color: #3d3f4a;
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    .left-panel.active {
+      display: table-cell;
+      width: 50%;
+    }
+
+    .right-panel {
+      display: table-cell;
+      width: 50%;
+      background-color: #4e5562;
+      text-align: center;
+      vertical-align: middle;
+      padding: 20px;
+    }
+
+    .menu-button {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #663761;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .menu-button:hover {
+      background-color: #2C9435;
+    }
+
+    .message-box {
+      background-color: #000000;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      width: 80%;
+      margin: auto;
+    }
+    
+a {
+  color: rgb(255, 255, 255); /* 通常時の色 */
+  text-decoration: none; /* 下線を消す場合 */
+}
+
+a:hover {
+  color: #E60685; /* マウスを乗せたときの色 */
+}
+/* 一度訪れた後の色 */
+/* a:visited { color: gray; } */
+
+  </style>
+</head>
+<body>
+
+<div class="tab-header">
+  <div class="tab-button active" onclick="switchTab(0)">Detail</div>
+  <div class="tab-button" onclick="switchTab(1)">Combat</div>
+  <div class="tab-button" onclick="switchTab(2)">Movement</div>
+  <div class="tab-button" onclick="switchTab(3)">Render</div>
+  <div class="tab-button" onclick="switchTab(4)">Item</div>
+  <div class="tab-button" onclick="switchTab(5)">World</div>
+  <div class="tab-button" onclick="switchTab(6)">Misc</div>
+  <div class="tab-button" onclick="switchTab(7)">Patch</div>
+  <div class="tab-button" onclick="switchTab(8)">Server</div>
+</div>
+
+<div class="container">
+  <div class="left-panel active">
+    <a href="https://forum.mcpinkd.com/" target="_blank">Pink Diamond official website</a><br>
+    <a href="https://sphereshark.github.io/mainsite/" target="_blank">The creator's homepage is here</a><br>
+    <br>
+    <br><br>
+    <p>Site creation date      <br>2025/4/17</p>
+    <p>Site last updated date   <br>2025/10/7</p>
+    <p>site creator:    cotone</p>
+    <br><br><br>
+    <p>Current PinkDiamond version information<br>:Version 2.1.1</p>
+</div>
+    <div class="left-panel">
+    <button class="menu-button" onclick="showMessage('This is an assist function that automatically adjusts your aim towards enemies.<br>You can specify whether it is a player or an entity.<br>You can set the detection range, angle, speed, and height.')">AimAssist</button>
+    <button class="menu-button" onclick="showMessage('It will automatically aim at the enemy.<br>Can be set to player or entity.')">AimBot</button>
+    <button class="menu-button" onclick="showMessage('always critical')">AlwaysCritical</button>
+    <button class="menu-button" onclick="showMessage('No longer knocks back.')">AntiKB</button>
+    <button class="menu-button" onclick="showMessage('It will be equipped automatically.')">AutoArmor</button>
+    <button class="menu-button" onclick="showMessage('You will be automatically disconnected.')">AutoDisconnect</button>
+
+    <button class="menu-button" onclick="showMessage('Automatically eats golden apples.')">AutoGapple</button>
+    <button class="menu-button" onclick="showMessage('The weapon will switch automatically.')">AutoWeapon</button>
+    <button class="menu-button" onclick="showMessage('When you try to shoot a bow, it will automatically calculate the enemy’s location.')">BowAimBot</button>
+    <button class="menu-button" onclick="showMessage('Shoot an arrow at yourself.')">EasyHitArrow</button>
+    <button class="menu-button" onclick="showMessage('You can press the ZR button repeatedly.')">FastAction</button>
+    <button class="menu-button" onclick="showMessage('The bow can be fired repeatedly.<br>You can specify the interval and number of arrows to fire.')">FastBow</button>
+
+    <button class="menu-button" onclick="showMessage('You can press the ZL button repeatedly.')">FastUse</button>
+    <button class="menu-button" onclick="showMessage('Attacks all players.<br>You can set the interval.')">InfinityAura</button>
+    <button class="menu-button" onclick="showMessage('How to use Kaura4.0<br>1. Player Specification<br>For push-button types<br>「D-Pad DOWN & R」To select a player<br>「D-Pad DOWN & L」return<br>By selecting a player, you can attack that player with SingleAura.<br>You can also add it to the TargetList.<br>For the viewpoint method<br>「Hold (D-Pad LEFT & ZL)」To select a player via the viewpoint<br>「D-Pad LEFT & ZL」Whilst pressed, it zooms in slightly to register when viewing the player.<br><br>2. TargetList<br>You can register up to one hundred players.<br>Registered players can attack using TargetAura.<br>「D-Pad DOWN & ZL」When registering a player<br>「D-Pad DOWN & ZL」To deregister, once more<br><br>3. SingleAura<br>SingleAura can attack the designated player.<br>「D-Pad UP & ZR」You can attack once.<br>「D-Pad UP ×5 (Short press)」Automatically attacks at regular intervals.<br>「D-Pad UP ×5 (Short press)」Disable auto-attack.<br><br>4. InfinityAura<br>InfinityAura attacks all players present in the world.<br>「D-Pad LEFT & ZR」You can attack once.<br>「D-Pad LEFT ×5 (Short press)」Automatically attacks at regular intervals.<br>「D-Pad LEFT ×5 (Short press)」Disable auto-attack.<br><br>5. TargetAura<br>TargetAura attacks all players registered in TargetList.<br>「D-Pad DOWN & ZR」You can attack once.<br>「D-Pad DOWN ×5 (Short press)」Automatically attacks at regular intervals.<br>「D-Pad DOWN ×5 (Short press)」Disable auto-attack.<br><br>6. AttackSpeed, MultiAttack, HitRata<br>Attack Speed can be adjusted across ten levels to control the rate of auto-attacks.<br>「D-Pad LEFT & R」to up speed.<br>「D-Pad LEFT & L」to down speed.<br>MultiAttack allows you to attack multiple times with a single strike.<br>The number of attacks can be adjusted across ten levels.<br>「D-Pad UP & R」Increase the attack count<br>「D-Pad UP & L」Reduce the attack count<br>HitRata can land attacks even when the opponent is moving at high speed.<br>It can be adjusted to five levels, but increasing it too much will place a load on the server.<br>「D-Pad RIGHT & R」It increases accuracy, but places a load on the system.<br>「D-Pad RIGHT & L」It reduces accuracy, but the load is reduced.')">KauraV4</button>
+    <button class="menu-button" onclick="showMessage('You can adjust the attack range.<br><br>・When adjusting the range, a frame is now displayed for improved visibility.<br>・You can intuitively adjust attack speed and range simply by moving the slider.<br>・Target selection can now be made with greater precision.<br>You can now select specific targets for attack, such as players, monsters, or animals.')">KillAura</button>
+    <button class="menu-button" onclick="showMessage('Attack multiple targets from different angles.')">MultiAura</button>
+
+    <button class="menu-button" onclick="showMessage('Increases the range of arrow firing.')">MultiBow</button>
+    <button class="menu-button" onclick="showMessage('Increased reach.<br>You can set the range.')">Reach</button>
+    <button class="menu-button" onclick="showMessage('A torrent will be triggered.')">Riptide</button>
+    <button class="menu-button" onclick="showMessage('You can move quickly and dodge attacks at the same time.<br>You can set the detection range and speed.')">TragetStrafe</button>
+    <button class="menu-button" onclick="showMessage('When you focus on an entity, it will automatically attack.<br>You can set the range')">TriggerBot</button>
+    
+  </div>
+  <div class="left-panel">
+    <button class="menu-button" onclick="showMessage('Can air jump')">AirJump</button>
+    <button class="menu-button" onclick="showMessage('Prevents damage from lava blocks.')">AntiHazard</button>
+    <button class="menu-button" onclick="showMessage('always jump')">AutoJump</button>
+    <button class="menu-button" onclick="showMessage('always running and eating')">AutoSprint</button>
+    <button class="menu-button" onclick="showMessage('jump like a rabbit.<br>You can adjust the force and speed.')">Bhop</button>
+    <button class="menu-button" onclick="showMessage('To others, it looks like it’s not moving.')">Blink</button>
+    <button class="menu-button" onclick="showMessage('You will be able to travel by boat.<br>You can specify the speed.')">BoatFly</button>
+
+    <button class="menu-button" onclick="showMessage('Click to teleport.<br>Can play sound')">ClickTP</button>
+    <button class="menu-button" onclick="showMessage('You can build bridges quickly.')">FastBridge</button>
+    <button class="menu-button" onclick="showMessage('It falls at high speed.')">FastFall</button>
+    <button class="menu-button" onclick="showMessage('You can climb ladders at high speed.<br>You can specify how fast you want to climb.')">FastLadders</button>
+    <button class="menu-button" onclick="showMessage('You can fly.')">Fly</button>
+    <button class="menu-button" onclick="showMessage('You can spiritually project and become like the audience.')">Freecam</button>
+    <button class="menu-button" onclick="showMessage('high Jump.<br>You can specify the jump height.')">HigtJump</button>
+
+    <button class="menu-button" onclick="showMessage('You can walk while your inventory is open.')">InventoryWalk</button>
+    <button class="menu-button" onclick="showMessage('I can walk on water.')">Jesus</button>
+    <button class="menu-button" onclick="showMessage('Flying in flight<br>adjust speed')">Jetpack</button>
+    <button class="menu-button" onclick="showMessage('You will be able to penetrate blocks.')">NoClip</button>
+    <button class="menu-button" onclick="showMessage('No fall damage.')">NoFallDamage</button>
+    <button class="menu-button" onclick="showMessage('You can run even when you’re hungry.')">Noslow</button>
+    <button class="menu-button" onclick="showMessage('Neutralize spider webs')">Noweb</button>
+
+    <button class="menu-button" onclick="showMessage('It looks sneaky to others.')">PacketSneak</button>
+    <button class="menu-button" onclick="showMessage('It looks like you’re swimming to others.')">PackeSwim</button>
+    <button class="menu-button" onclick="showMessage('I walk slowly.')">SafeWalk</button>
+    <button class="menu-button" onclick="showMessage('You can set the movement speed.<br>You can set the speed at which it moves.')">Speed</button>
+    <button class="menu-button" onclick="showMessage('You can climb walls like a spider.<br>You can set the climbing speed.')">Spider</button>
+    <button class="menu-button" onclick="showMessage('Teleport to the top of the wall.<br>You can set the height.')">Step</button>
+  </div>
+  <div class="left-panel">
+    <button class="menu-button" onclick="showMessage('The state of the armor is displayed.')">ArmorHUD</button>
+    <button class="menu-button" onclick="showMessage('It is more accurate than a regular name tag.')">BetterNameTag</button>
+    <button class="menu-button" onclick="showMessage('The CPS for ZR and ZL are displayed.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">CPS</button>
+    <button class="menu-button" onclick="showMessage('Allows entities to be seen through walls.')">Chams</button>
+    <button class="menu-button" onclick="showMessage('You can change the field of view.<br>The angle can be adjusted.')">ChangeFov</button>
+    <button class="menu-button" onclick="showMessage('It makes chest locations easier to find. ESP is included.<br>You can configure chest settings.<br>You can specify the box, tracer, and color.')">ChestESP</button>
+    <button class="menu-button" onclick="showMessage('You can change the empty state as you like.<br>Press and hold a module to see its description')">CustomSky</button>
+    <button class="menu-button" onclick="showMessage('ESP will be displayed.<br>You can specify boxes, tracers, and colors for players, friendly mobs, hostile monsters, and more.')">ESP</button>
+
+    <button class="menu-button" onclick="showMessage('FPS will be displayed.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">FPS</button>
+    <button class="menu-button" onclick="showMessage('The screen will become brighter.')">FullBright</button>
+    <button class="menu-button" onclick="showMessage('Ability to load high quality textures')">HDItems</button>
+    <button class="menu-button" onclick="showMessage('Your HP will be displayed.')">HPIndicator</button>
+    <button class="menu-button" onclick="showMessage('HitBox shows')">HitBox</button>
+    <button class="menu-button" onclick="showMessage('Show WASD.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">KeyStrokes</button>
+    <button class="menu-button" onclick="showMessage('All enchantment levels are displayed numerically.')">LevelNorm</button>
+    <button class="menu-button" onclick="showMessage('The name tag is displayed.')">NameTag</button>
+
+    <button class="menu-button" onclick="showMessage('Disables the screen viewing angle when moving.')">NoDynamicFOV</button>
+    <button class="menu-button" onclick="showMessage('You can disable the fire display.')">NoFire</button>
+    <button class="menu-button" onclick="showMessage('You can disable the fog display.')">NoFog</button>
+    <button class="menu-button" onclick="showMessage('Disable screen shake')">NoHurtCam</button>
+    <button class="menu-button" onclick="showMessage('Disable Minecraft fonts')">NoMCFont</button>
+    <button class="menu-button" onclick="showMessage('Disable Particles')">NoParticle</button>
+    <button class="menu-button" onclick="showMessage('You can make the weather always sunny.')">Norain</button>
+    <button class="menu-button" onclick="showMessage('Disables texture loading')">NoTexture</button>
+
+    <button class="menu-button" onclick="showMessage('Disables animations when holding a totem.')">NoTotemAnim</button>
+    <button class="menu-button" onclick="showMessage('The coordinates will be displayed.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">Position</button>
+    <button class="menu-button" onclick="showMessage('Show shadow.<br>You can specify the color.')">Shader</button>
+    <button class="menu-button" onclick="showMessage('The locations of nearby players, monsters, animals, etc. are now displayed on screen.')">Rader</button>
+    <button class="menu-button" onclick="showMessage('You can resize the skin.<br>Size is adjustable.')">SkinSizeChange</button>
+    <button class="menu-button" onclick="showMessage('Makes invisible entities (such as players) visible.')">TrueSight</button>
+    <button class="menu-button" onclick="showMessage('You can change the draw distance.')">ViewDistance</button>
+    <button class="menu-button" onclick="showMessage('You can zoom in and out on distant scenes.<br>You can adjust the distance.')">Zoom</button>
+  </div>
+  <div class="left-panel">
+    <button class="menu-button" onclick="showMessage('You can automatically switch weapons.')">AutoTools</button>
+    <button class="menu-button" onclick="showMessage('Take all the contents of the chest')">ChestSteal</button>
+    <button class="menu-button" onclick="showMessage('You can reset your inventory.')">ClearInventory</button>
+    <button class="menu-button" onclick="showMessage('You can craft anything, anywhere.')">CraftEverything</button>
+
+    <button class="menu-button" onclick="showMessage('You can create items.<br>Fully configurable')">CreateItem</button>
+    <button class="menu-button" onclick="showMessage('You can discard all of your items at once.')">DropStack</button>
+    <button class="menu-button" onclick="showMessage('It can be crafted quickly.')">FastCraft</button>
+    <button class="menu-button" onclick="showMessage('Items for combat are crafted.')">InstantArming</button>
+
+    <button class="menu-button" onclick="showMessage('You can copy items.')">ItemCopy</button>
+    <button class="menu-button" onclick="showMessage('You can set the number of items you have on hand.')">ItemStack</button>
+    <button class="menu-button" onclick="showMessage('You can change the damage value of items you own.')">ReplaceDamage</button>
+    <button class="menu-button" onclick="showMessage('You can change the ID of the item you own.')">ReplaceId</button>
+    
+    <button class="menu-button" onclick="showMessage('The item’s ID is displayed.')">ShowItemID</button>
+    <button class="menu-button" onclick="showMessage('Automatically categorize and organize items in your inventory.')">SortInventory</button>
+    <button class="menu-button" onclick="showMessage('You can move the item to the left.')">SwapOffHand</button>
+  </div>
+  <div class="left-panel">
+    <button class="menu-button" onclick="showMessage('You can create 3D models.')">3DArt</button>
+    <button class="menu-button" onclick="showMessage('All commands are disabled')">AntiCommand</button>
+    <button class="menu-button" onclick="showMessage('not be expelled')">AntiKick</button>
+
+    <button class="menu-button" onclick="showMessage('A faster version of Nuker.<br>This can be a cube, a sphere, or an area.')">FastNuker</button>
+    <button class="menu-button" onclick="showMessage('Crops are automatically harvested and replanted.')">HarvestWithEase</button>
+    <button class="menu-button" onclick="showMessage('You can change the items in detail.')">NBT Edit</button>
+
+    <button class="menu-button" onclick="showMessage('A simple Nuker that allows you to specify the shape and range.<br>This can be a cube, a sphere, or an area.')">Nuker</button>
+    <button class="menu-button" onclick="showMessage('You can create pixel art.')">PixelArt</button>
+    
+    <button class="menu-button" onclick="showMessage('Click on the sign while crouching to edit it.')">SignEditor</button>
+    <button class="menu-button" onclick="showMessage('Blocks can be edited<br><br>How to use World Edit<br>You can hold the tool in your left hand.<br>The way the tool is held in the left hand requires adapting the swap off-hand module.<br><br>When you hold each tool in your left hand, a corresponding frame will appear.<br><br>How to run「D-Pad DOWN & ZL」<br>Some tools are applied with or without a block.<br><br>You can adjust the range while holding the tool.<br>「D-Pad DOWN & L」increase size<br>「D-Pad DOWN & R」reduce size<br>The wider the range, the heavier the processing.<br>There is no size limit, but the chance of crashing is higher.<br><br>You can change the smoothness with some tools.<br>「D-Pad LEFT & L」increase size<br>「D-Pad LEFT & R」reduce size<br>Iron pickaxe, gold pickaxe, diamond pickaxe<br>「ZR & D-Pad DOWN」You can freely set the range by pressing the button.<br><br>You can stack blocks into a spherical shape using a wooden axe.<br><br>You can use a wooden pickaxe to carve the block into a spherical shape.<br><br>You can use a wooden shovel to chop down blocks.<br><br>You can use a wooden hoe to place blocks on pillars.<br>You can build from the block above to the ground below.<br><br>You can use a stone shovel to raise the blocks.<br><br>The Stone Axe allows you to edit blocks in front of your line of sight.<br>・When you hold a block, you can overwrite the block in front of you with that block.<br>・When you are not holding anything, you can cut one type of block in front of your eyes.<br><br>Use the stone hoe to place blocks centered around your feet.<br><br>You can also use an iron axe to create just the frame.<br><br>You can build walls using an iron pickaxe.<br>・Holding a block will create a wall.<br>・You can delete it without having anything in it.<br><br>The gold pickaxe allows you to create any circular shape.<br><br>You can use a diamond pickaxe to create a three-dimensional layout.<br><br><br>Commentary on other items<br>Water and lava can only be removed using a bucket.<br>You can use tall grass to overwrite dirt blocks with grass blocks.<br>Torches can be used to efficiently place torches.<br>')">WorldEdit</button>
+    </div>
+    <div class="left-panel">
+        <button class="menu-button" onclick="showMessage('You can check your performance in the minigame at any time.')">AlwaysScoreCheck</button>
+        <button class="menu-button" onclick="showMessage('You can load music by placing MIDI files in [sd:/PinkDiamond/audio/].<br>再生モード<br>・Normal mode: Play only with piano<br>・Extended mode: Play with multiple instruments')">AudioPlayer</button>
+        <button class="menu-button" onclick="showMessage('You can catch fish automatically.')">AutoFish</button>
+        <button class="menu-button" onclick="showMessage('You can visualize chunk boundaries.')">DebugMode</button>
+        <button class="menu-button" onclick="showMessage('Remove the friend of a friend restriction.')">FOFBypass</button>
+
+        <button class="menu-button" onclick="showMessage('You can change your skin during the minigame.')">MGSwapSkin</button>
+        <button class="menu-button" onclick="showMessage('It can be kept running on a small screen at all times without having to open the message screen.')">Message</button>
+        <button class="menu-button" onclick="showMessage('The other person cannot hear you.')">MicMute</button>
+        <button class="menu-button" onclick="showMessage('You can change the name of your Mii.')">MiiChanger</button>
+        <button class="menu-button" onclick="showMessage('You can start your own minigame.')">MiniGameStart</button>
+
+        <button class="menu-button" onclick="showMessage('The available modules will be displayed on the screen.')">ModuleList</button>
+        <button class="menu-button" onclick="showMessage('You can change the NNID.')">NNIDChanger</button>
+        <button class="menu-button" onclick="showMessage('Disable censorship.')">NoCensored</button>
+        <button class="menu-button" onclick="showMessage('You can enable public in minigames.')">PublicGame</button>
+        <button class="menu-button" onclick="showMessage('Return to the main menu.')">ToMenu</button>
+
+        <button class="menu-button" onclick="showMessage('Unlock additional content.')">UnlockDLC</button>
+        <button class="menu-button" onclick="showMessage('You can also unlock your home button online.')">UnlockHome</button>
+        <button class="menu-button" onclick="showMessage('You can change your voice.')">VoiceChanger</button>
+        <button class="menu-button" onclick="showMessage('In the mini-game, you can specify the number of stages you want to vote for.')">VoteIncrease</button>
+    </div>
+    <div class="left-panel">
+        <button class="menu-button" onclick="showMessage('Fixed an issue where being hit by many tagged arrows would freeze the game.')">AntiCrashArrow</button>
+        <button class="menu-button" onclick="showMessage('Fixed an issue that caused freezing when using a dispenser.')">AntiCrashDispenser</button>
+        <button class="menu-button" onclick="showMessage('Fixed an issue that caused fish items to freeze with non-existent textures.')">AntiCrashFish</button>
+        <button class="menu-button" onclick="showMessage('Fixed packet freezing issue.')">AntiCrashPacket</button>
+
+        <button class="menu-button" onclick="showMessage('Fixed a freezing issue caused by an invalid skin.')">AntiCrashSkin</button>
+        <button class="menu-button" onclick="showMessage('Fixed an issue where looking at a non-existent head item would freeze the game.')">AntiCrashScull</button>
+        <button class="menu-button" onclick="showMessage('Fixed a freezing issue when a non-mob entity was summoned from a spawner.')">AntiCrashSpawner</button>
+        <button class="menu-button" onclick="showMessage('Fixed a freezing issue when being teleported to a non-existent fraud.')">AntiCrashTP</button>
+        
+        <button class="menu-button" onclick="showMessage('Fixed an issue where the game would freeze when attempting to summon from certain directions.')">AntiCrashWithGolem</button>
+        <button class="menu-button" onclick="showMessage('Disables custom skins.')">AntiCustomSkin</button>
+        <button class="menu-button" onclick="showMessage('Solves the problem of piston door freezing.')">AntiPistonDoorBugs</button>
+        <button class="menu-button" onclick="showMessage('Disables illegal craft packets.')">FixCraftPacket</button>
+
+        <button class="menu-button" onclick="showMessage('Fixes a freezing issue related to double slab blocks.')">FixDoubleSlab</button>
+        <button class="menu-button" onclick="showMessage('Fixed an issue with using two potions.')">FixSplashPotion</button>
+        <button class="menu-button" onclick="showMessage('Disables cutting skins.')">NetWorkProtect</button>
+    </div>
+    <div class="left-panel">
+        <button class="menu-button" onclick="showMessage('Amplified terrain can be generated during world generation.')">Amplified</button>
+        <button class="menu-button" onclick="showMessage('Long press on an item to obtain a BackPack item.<br>Swing your arm while holding it to open your BackPack.')">BackPack</button>
+        <button class="menu-button" onclick="showMessage('It also does damage in Creative mode.')">CanKillCreative</button>
+        <button class="menu-button" onclick="showMessage('You can set up combos.')">CustomCombo</button>
+        <button class="menu-button" onclick="showMessage('You can change the damage value of an item using a special stick.')">DebugStick</button>
+        <button class="menu-button" onclick="showMessage('Disables block breaking.')">DisbleBreakBlock</button>
+        <button class="menu-button" onclick="showMessage('You can disable crafting.')">DisbleCraft</button>
+        <button class="menu-button" onclick="showMessage('You will no longer be able to retrieve the item from your creative inventory.')">DisbleCreative</button>
+
+        <button class="menu-button" onclick="showMessage('Neutralize potions')">DisblePotion</button>
+        <button class="menu-button" onclick="showMessage('Adjacent doors can be opened and closed simultaneously.')">DoubleDoor</button>
+        <button class="menu-button" onclick="showMessage('Hitting an entity with an egg will deal damage')">EggDamage</button>
+        <button class="menu-button" onclick="showMessage('Shooting snowballs causes explosions')">ExploitSnowBall</button>
+        <button class="menu-button" onclick="showMessage('Passes damage through when an entity is hooked on a fishing rod.')">FishingRodDamage</button>
+        <button class="menu-button" onclick="showMessage('Removed armor slot limit')">FreeArmorSlot</button>
+        <button class="menu-button" onclick="showMessage('Remove left hand restrictions')">FreeOffhand</button>
+        <button class="menu-button" onclick="showMessage('Infinite durability')">InfiniteEndurance</button>
+
+        <button class="menu-button" onclick="showMessage('Infinite potion time')">InfinitePotionTime</button>
+        <button class="menu-button" onclick="showMessage('You can place a shulker box inside a shulker box.')">NestedShulker</button>
+        <button class="menu-button" onclick="showMessage('Limit the number of players in a world')">PlayerLimit</button>
+        <button class="menu-button" onclick="showMessage('Any block hit by the projectile is destroyed')">ProjectilesBreak</button>
+        <button class="menu-button" onclick="showMessage('Signboard command is applied.')">SignCommands</button>
+        <button class="menu-button" onclick="showMessage('Allows all players in your world to use the SignEditor feature.')">SignEditorPlugin</button>
+        <button class="menu-button" onclick="showMessage('Look at a stair or half block and swing your arm to sit down.')">SitPlugin</button>
+
+        <button class="menu-button" onclick="showMessage('Hitting entities with snowballs will cause damage')">SnowBallDamage</button>
+        <button class="menu-button" onclick="showMessage('When the TNT explodes, it does not destroy the block.')">TNTBreakDisable</button>
+        <button class="menu-button" onclick="showMessage('It can fly sideways like a falling firework.')">TumbleFireworks</button>
+        <button class="menu-button" onclick="showMessage('Removes the limit on the number of blocks that can be placed, such as flags and beacons.')">UnlockBlockLimit</button>
+        <button class="menu-button" onclick="showMessage('There is no longer a limit to the number of enchantments that can be combined.')">UnlockEnchantLimit</button>
+        <button class="menu-button" onclick="showMessage('Removed the mob limit')">UnlockModLimit</button>
+        <button class="menu-button" onclick="showMessage('Destroy specific blocks all at once')">ViewMiner</button>
+        </div>
+
+  <div class="right-panel">
+    <div id="messageBox" class="message-box">Press the button with the name on it to display the explanation here.</div>
+  </div>
+</div>
+
+<script>
+  function showMessage(msg) {
+    document.getElementById("messageBox").innerHTML = msg;
+  }
+
+  function switchTab(index) {
+    var panels = document.getElementsByClassName("left-panel");
+    var tabs = document.getElementsByClassName("tab-button");
+    for (var i = 0; i < panels.length; i++) {
+      if (i === index) {
+        panels[i].className = "left-panel active";
+        tabs[i].className = "tab-button active";
+      } else {
+        panels[i].className = "left-panel";
+        tabs[i].className = "tab-button";
+      }
+    }
+  }
+
+</script>
+
+</body>
+</html>
+
+  <button class="back" onclick="window.location.href='index.html'">戻る</button>
+</div>
+
+</body>
+</html>
