@@ -1,1 +1,0 @@
-# mcpinkd_usage
