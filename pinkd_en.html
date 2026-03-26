@@ -133,10 +133,10 @@ a:hover {
     <br>
     <br><br>
     <p>Site creation date      <br>2025/4/17</p>
-    <p>Site last updated date   <br>2025/10/7</p>
+    <p>Site last updated date   <br>2026/03/26</p>
     <p>site creator:    cotone</p>
     <br><br><br>
-    <p>Current PinkDiamond version information<br>:Version 2.1.1</p>
+    <p>Current PinkDiamond version information<br>:Version 2.2.0</p>
 </div>
     <div class="left-panel">
     <button class="menu-button" onclick="showMessage('This is an assist function that automatically adjusts your aim towards enemies.<br>You can specify whether it is a player or an entity.<br>You can set the detection range, angle, speed, and height.')">AimAssist</button>
@@ -164,7 +164,7 @@ a:hover {
     <button class="menu-button" onclick="showMessage('A torrent will be triggered.')">Riptide</button>
     <button class="menu-button" onclick="showMessage('You can move quickly and dodge attacks at the same time.<br>You can set the detection range and speed.')">TragetStrafe</button>
     <button class="menu-button" onclick="showMessage('When you focus on an entity, it will automatically attack.<br>You can set the range')">TriggerBot</button>
-    
+    <button class="menu-button" onclick="showMessage('A feature that allows you to attack while blocking with a shield.<br>・Control of both arm movements<br>・Automatic adjustment based on weapon type<br>・Realistic animation display')">GuardAttack</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('Can air jump')">AirJump</button>
@@ -175,7 +175,7 @@ a:hover {
     <button class="menu-button" onclick="showMessage('To others, it looks like it’s not moving.')">Blink</button>
     <button class="menu-button" onclick="showMessage('You will be able to travel by boat.<br>You can specify the speed.')">BoatFly</button>
 
-    <button class="menu-button" onclick="showMessage('Click to teleport.<br>Can play sound')">ClickTP</button>
+    <button class="menu-button" onclick="showMessage('Click to teleport.<br>Maximum teleport distance setting option<br>Can play sound')">ClickTP</button>
     <button class="menu-button" onclick="showMessage('You can build bridges quickly.')">FastBridge</button>
     <button class="menu-button" onclick="showMessage('It falls at high speed.')">FastFall</button>
     <button class="menu-button" onclick="showMessage('You can climb ladders at high speed.<br>You can specify how fast you want to climb.')">FastLadders</button>
@@ -197,15 +197,16 @@ a:hover {
     <button class="menu-button" onclick="showMessage('You can set the movement speed.<br>You can set the speed at which it moves.')">Speed</button>
     <button class="menu-button" onclick="showMessage('You can climb walls like a spider.<br>You can set the climbing speed.')">Spider</button>
     <button class="menu-button" onclick="showMessage('Teleport to the top of the wall.<br>You can set the height.')">Step</button>
+    <button class="menu-button" onclick="showMessage('A safety feature that automatically puts you in sneak mode when you reach the edge of a block.<br>・Automatically disabled in flight mode.<br>・Improving safety in construction work')">Parkour</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('The state of the armor is displayed.')">ArmorHUD</button>
-    <button class="menu-button" onclick="showMessage('It is more accurate than a regular name tag.')">BetterNameTag</button>
+    <button class="menu-button" onclick="showMessage('It is more accurate than a regular name tag.<br>Support for displaying ItemEntity (dropped items)<br>Display of item durability<br>Display of detailed information for Mobs (monsters/animals)<br>Added ItemOverlay functionality')">BetterNameTag</button>
     <button class="menu-button" onclick="showMessage('The CPS for ZR and ZL are displayed.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">CPS</button>
     <button class="menu-button" onclick="showMessage('Allows entities to be seen through walls.')">Chams</button>
     <button class="menu-button" onclick="showMessage('You can change the field of view.<br>The angle can be adjusted.')">ChangeFov</button>
     <button class="menu-button" onclick="showMessage('It makes chest locations easier to find. ESP is included.<br>You can configure chest settings.<br>You can specify the box, tracer, and color.')">ChestESP</button>
-    <button class="menu-button" onclick="showMessage('You can change the empty state as you like.<br>Press and hold a module to see its description')">CustomSky</button>
+    <button class="menu-button" onclick="showMessage('You can change the empty state as you like.<br>Press and hold a module to see its description<br>Full integration of TimeChanger and WeatherChanger<br>More accurate time of day determination (morning, noon, evening, night)')">CustomSky</button>
     <button class="menu-button" onclick="showMessage('ESP will be displayed.<br>You can specify boxes, tracers, and colors for players, friendly mobs, hostile monsters, and more.')">ESP</button>
 
     <button class="menu-button" onclick="showMessage('FPS will be displayed.<br>You can pin the location you draw.<br>You can specify the background and text colors.<br>You can smooth the contours of your drawing.')">FPS</button>
@@ -234,6 +235,8 @@ a:hover {
     <button class="menu-button" onclick="showMessage('Makes invisible entities (such as players) visible.')">TrueSight</button>
     <button class="menu-button" onclick="showMessage('You can change the draw distance.')">ViewDistance</button>
     <button class="menu-button" onclick="showMessage('You can zoom in and out on distant scenes.<br>You can adjust the distance.')">Zoom</button>
+    <button class="menu-button" onclick="showMessage('A feature that allows you to freely adjust the time within the game world.<br>・Features smooth easing function<br>・The phases of the moon can be set.<br>・Support for integration with CustomSky.')">TimeChanger</button>
+    <button class="menu-button" onclick="showMessage('A feature that allows you to completely control the weather.<br>・You can set the weather to sunny, rainy, snowy, or thunderstormy.<br>・Smooth weather change easing function<br>・Fully integrated with CustomSky')">WeatherChanger</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('You can automatically switch weapons.')">AutoTools</button>
@@ -300,7 +303,7 @@ a:hover {
         <button class="menu-button" onclick="showMessage('Fixed an issue that caused fish items to freeze with non-existent textures.')">AntiCrashFish</button>
         <button class="menu-button" onclick="showMessage('Fixed packet freezing issue.')">AntiCrashPacket</button>
 
-        <button class="menu-button" onclick="showMessage('Fixed a freezing issue caused by an invalid skin.')">AntiCrashSkin</button>
+        <button class="menu-button" onclick="showMessage('Fixed a freezing issue caused by an invalid skin.')">NoCustomSkin</button>
         <button class="menu-button" onclick="showMessage('Fixed an issue where looking at a non-existent head item would freeze the game.')">AntiCrashScull</button>
         <button class="menu-button" onclick="showMessage('Fixed a freezing issue when a non-mob entity was summoned from a spawner.')">AntiCrashSpawner</button>
         <button class="menu-button" onclick="showMessage('Fixed a freezing issue when being teleported to a non-existent fraud.')">AntiCrashTP</button>
@@ -347,7 +350,9 @@ a:hover {
         <button class="menu-button" onclick="showMessage('Removes the limit on the number of blocks that can be placed, such as flags and beacons.')">UnlockBlockLimit</button>
         <button class="menu-button" onclick="showMessage('There is no longer a limit to the number of enchantments that can be combined.')">UnlockEnchantLimit</button>
         <button class="menu-button" onclick="showMessage('Removed the mob limit')">UnlockModLimit</button>
-        <button class="menu-button" onclick="showMessage('Destroy specific blocks all at once')">ViewMiner</button>
+        <button class="menu-button" onclick="showMessage('Destroy specific blocks all at once<br>A feature that automatically collects destroyed items.<br>Full support for enchantments (Luck, Silk Touch, etc.).')">ViewMiner</button>
+        <button class="menu-button" onclick="showMessage('Custom lobby feature before mini-games begin<br>・Host-only features<br>・You can freely set the waiting time before the game starts.<br>・You can wait in the lobby until enough players have gathered.')">CustomBattleLobby</button>
+        <button class="menu-button" onclick="showMessage('You can join a mini-game even after it has started.<br>・Host-only features<br>・New players can join even while the game is in progress.<br>・Maintaining the existing game balance')">MidGameJoin</button>
         </div>
 
   <div class="right-panel">
