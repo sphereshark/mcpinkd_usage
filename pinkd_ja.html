@@ -192,14 +192,15 @@ a:hover {
     <button class="menu-button" onclick="showMessage('自動的にエイムを敵に合わせてくれる補正機能です。<br>プレイヤーかエンティティか指定することができます。<br>検知する範囲や角度、速さ、高さを設定することができます。')">エイムアシスト</button>
     
     <button class="menu-button" onclick="showMessage('自動的にエイムを敵に合わせてくれます。<br>プレイヤーかエンティティか設定できます。')">エイムボット</button>
+    <button class="menu-button" onclick="showMessage('盾でブロックしながら同時に攻撃できる機能<br>・両腕（右腕・左腕）の動作制御<br>・武器の種類に応じた自動調整<br>・リアルなアニメーション表示')">ガード攻撃</button>
     <button class="menu-button" onclick="showMessage('攻撃する範囲を調整できます。<br><br>機能が増えました。<br>・範囲を調整する際、枠が表示されて見えやすくなりました。<br>・攻撃する速さや距離を、スライダーを動かすだけで直感的に調整できます。<br>・ターゲット選択が細かくできるようになりました。<br>プレイヤー、モンスター、動物など、攻撃したい相手を細かく選べるようになりました。')">キルオーラ</button>
+    <button class="menu-button" onclick="showMessage('いつでもクリティカル')">クリティカル</button>
     <button class="menu-button" onclick="showMessage('高速移動して回避しながら攻撃ができます。<br>検知する範囲や速さを設定できます。')">ターゲットストレイフ</button>
     <button class="menu-button" onclick="showMessage('エンティティに視点合わせると自動で攻撃してくれます。<br>範囲を設定できます。')">トリガーボット</button>
+
     <button class="menu-button" onclick="showMessage('複数の対象に攻撃してくれます。<br>間隔、最大距離を設定できます。プレイヤー、モブ、モンスター、生物を指定できます。')">マルチオーラ</button>
     <button class="menu-button" onclick="showMessage('矢の発射範囲を広げます。<br>方角をランダムにできます。')">マルチボウ</button>
-    
     <button class="menu-button" onclick="showMessage('リーチが伸びます。<br>範囲を設定できます。')">リーチを伸ばす</button>
-    <button class="menu-button" onclick="showMessage('いつでもクリティカル')">常時クリティカル</button>
     <button class="menu-button" onclick="showMessage('弓を打とうとすると自動的に敵の場所まで計算してくれます。<br>プレイヤーだけかエンティティだけか指定できます。<br>検知する角度を調整することができます。')">弓エイムボット</button>
     <button class="menu-button" onclick="showMessage('弓を連射できます。<br>間隔と連射する矢の多さを指定できます。')">弓連射</button>
     <button class="menu-button" onclick="showMessage('激流が発動します。')">激流</button>
@@ -209,7 +210,6 @@ a:hover {
     <button class="menu-button" onclick="showMessage('自動で装備します。')">自動装備</button>
     <button class="menu-button" onclick="showMessage('自動で金リンゴ食べます。')">自動金リンゴ</button>
     <button class="menu-button" onclick="showMessage('自分に矢を当てます。')">自身に矢を当てる</button>
-    <button class="menu-button" onclick="showMessage('盾でブロックしながら同時に攻撃できる機能<br>・両腕（右腕・左腕）の動作制御<br>・武器の種類に応じた自動調整<br>・リアルなアニメーション表示')">ガード攻撃</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('溶岩ブロックからダメージを防ぎます。')">アンチハザード</button>
@@ -224,25 +224,25 @@ a:hover {
     <button class="menu-button" onclick="showMessage('壁の上までテレポートします。<br>高さを設定することができます。')">ステップ</button>
     <button class="menu-button" onclick="showMessage('クモのように壁を上ることができます。<br>上る速さを設定することができます。')">スパイダー</button>
     <button class="menu-button" onclick="showMessage('移動スピードを設定できます。<br>移動する速さを設定することができます。')">スピード</button>
-    <button class="menu-button" onclick="showMessage('空腹状態でも走れます。')">スロー効果無効（移動速度低下無効）</button>
+    <button class="menu-button" onclick="showMessage('空腹状態でも走れます。')">スロー効果無効</button>
     <button class="menu-button" onclick="showMessage('高くジャンプします。<br>ジャンプする高さを指定することができます。')">ハイジャンプ</button>
     <button class="menu-button" onclick="showMessage('うさぎのように跳べます。<br>勢いと速さを調整することができます。')">バニーホップ</button>
     
     <button class="menu-button" onclick="showMessage('他人から泳いでるように見えます。')">パケットスイム</button>
     <button class="menu-button" onclick="showMessage('他人からスニークしてるように見えます。')">パケットスニーク</button>
+    <button class="menu-button" onclick="showMessage('ブロックの端で自動的にスニーク状態になる安全機能<br>・飛行モード時は自動的に無効化<br>・建築作業での安全性向上')">パルクール</button>
     <button class="menu-button" onclick="showMessage('幽体離脱してスペクテイターのようになれます。')">フリーカメラ</button>
     <button class="menu-button" onclick="showMessage('他人からは移動していないように見えます。')">ブリンク</button>
     <button class="menu-button" onclick="showMessage('ブロックを貫通できるようになります。')">ブロック貫通</button>
     <button class="menu-button" onclick="showMessage('ボートで移動、飛行できるようになります。<br>速さを指定することができます。')">ボート飛行</button>
-    <button class="menu-button" onclick="showMessage('ゆっくり歩きます。')">安全歩行</button>
     
+    <button class="menu-button" onclick="showMessage('ゆっくり歩きます。')">安全歩行</button>    
     <button class="menu-button" onclick="showMessage('水の上を歩けます。')">水上歩行</button>
     <button class="menu-button" onclick="showMessage('落下ダメージがなくなります。')">落下ダメージ無効</button>
     <button class="menu-button" onclick="showMessage('飛べます。')">飛行</button>
     <button class="menu-button" onclick="showMessage('高速ではしごを登れます。<br>登れる速さを指定できます。')">高速はしご</button>
     <button class="menu-button" onclick="showMessage('高速で橋を作れます。')">高速ブリッジ</button>
     <button class="menu-button" onclick="showMessage('高速で落下します。')">高速落下</button>
-    <button class="menu-button" onclick="showMessage('ブロックの端で自動的にスニーク状態になる安全機能<br>・飛行モード時は自動的に無効化<br>・建築作業での安全性向上')">パルクール</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('ZRとZLのCPSが表示されます。<br>描画した場所を固定できます。<br>背景と文字の色を指定することができます。<br>描画の枠をなめらかにできます。')">CPS</button>
@@ -259,20 +259,23 @@ a:hover {
     <button class="menu-button" onclick="showMessage('スキンのサイズが変更できます。<br>大きさを調整できます。')">スキンサイズ変更</button>
     <button class="menu-button" onclick="showMessage('遠くの景色を拡大、縮小できます。<br>距離を調整できます。')">ズーム</button>
     <button class="menu-button" onclick="showMessage('チェストにESPが付きます。<br>チェスト関連のものを設定できます。<br>ボックス(枠)、トレーサー(目線)、色を指定できます。')">チェストESP</button>
+    <button class="menu-button" onclick="showMessage('チャンクの境界線が表示されます。')">チャンク境界</button>
     <button class="menu-button" onclick="showMessage('テクスチャのロードが無効化になります。')">テクスチャ無効</button>
     <button class="menu-button" onclick="showMessage('トーテムを持って死んだときのアニメーションを無効にします。')">トーテムアニメ無効</button>
     <button class="menu-button" onclick="showMessage('画面が明るくなります。')">ナイトビジョン</button>
-
     <button class="menu-button" onclick="showMessage('ネームタグが表示されます。')">ネームタグ</button>
+
     <button class="menu-button" onclick="showMessage('パーティクルが無効化になります。')">パーティクル無効</button>
     <button class="menu-button" onclick="showMessage('エンチャントレベルが全て数字で表示されます。')">レベル正規化</button>
     <button class="menu-button" onclick="showMessage('周りにいるプレイヤーやモンスター、動物などの位置が画面に表示されるようになります。')">レーダー</button>
     <button class="menu-button" onclick="showMessage('体力が表示されます。')">体力表示</button>
     <button class="menu-button" onclick="showMessage('走った時、走りを解除したときなどに出てくる画面の視野角を無効化します。')">動的視野角無効</button>
+    <button class="menu-button" onclick="showMessage('天候を完全制御できる機能<br>・晴れ・雨・雪・雷の設定が可能<br>・滑らかな天候変化のイージング機能<br>・CustomSkyとの完全統合')">天候変更</button>
     <button class="menu-button" onclick="showMessage('座標が表示されます。<br>描画した場所を固定できます。<br>背景と文字の色を指定することができます。<br>描画の枠をなめらかにできます。')">座標表示</button>
     <button class="menu-button" onclick="showMessage('エンティティに枠が表示されます。')">当たり判定表示</button>
 
     <button class="menu-button" onclick="showMessage('描画距離を変更することができます。<br> デフォルトは50 <br>1～100まで設定することができます。')">描画距離を変更</button>
+    <button class="menu-button" onclick="showMessage('ワールド内の時間を自由に調整できる機能<br>・滑らかなイージング機能付き<br>・月の満ち欠け設定が可能<br>・CustomSkyとの連携対応')">時間変更</button>
     <button class="menu-button" onclick="showMessage('火の表示を無効化できます。<br>燃えてるときの高さを調整できます。')">火を非表示</button>
     <button class="menu-button" onclick="showMessage('ゲーム画面が揺れた時の揺れを無効化します。')">画面の揺れ無効</button>
     <button class="menu-button" onclick="showMessage('透明状態のエンティティ（プレイヤーなど）を視認可能にします。')">真視</button>
@@ -280,8 +283,6 @@ a:hover {
     <button class="menu-button" onclick="showMessage('天候を常に晴れにすることができます。')">雨無効</button>
     <button class="menu-button" onclick="showMessage('霧の表示を無効化できます。')">霧を非表示</button>
     <button class="menu-button" onclick="showMessage('32x 以上の高解像度 [items.png] を読み込み可能に。')">高画質アイテム</button>
-    <button class="menu-button" onclick="showMessage('ワールド内の時間を自由に調整できる機能<br>・滑らかなイージング機能付き<br>・月の満ち欠け設定が可能<br>・CustomSkyとの連携対応')">時間変更</button>
-    <button class="menu-button" onclick="showMessage('天気を完全制御できる機能<br>・晴れ・雨・雪・雷の設定が可能<br>・滑らかな天気変化のイージング機能<br>・CustomSkyとの完全統合')">天気変更</button>
   </div>
   <div class="left-panel">
     <button class="menu-button" onclick="showMessage('手に持ってるアイテムのIDを書き換えることができます。<br>IDを書き換えることができます。')">ID書き換え</button>
@@ -323,15 +324,14 @@ a:hover {
         <button class="menu-button" onclick="showMessage('Miiの名前を変更できます。<br>名前を変更できる場所があります。')">Miiの名前変更</button>
         <button class="menu-button" onclick="showMessage('NNIDを変更できます。<br>IDを変更できる場所があります。')">NNID変更</button>
         <button class="menu-button" onclick="showMessage('sd:/PinkDiamond/audio/ に MIDI ファイルを入れることで音楽を読み込むことができます。<br>「更新」ボタンで、フォルダ内の MIDI を再読み込み可能<br>リストから再生したい MIDI を選び、「MIDIをロード」→「再生」で再生することができます。<br>再生モード<br>・通常モード：ピアノのみで演奏<br>・拡張モード：複数の楽器で演奏')">オーディオプレイヤー</button>
-        <button class="menu-button" onclick="showMessage('チャンク境界を視覚できます。')">デバッグ画面</button>
-        
         <button class="menu-button" onclick="showMessage('ミニゲームでパブリックを有効にできます。')">パブリック有効</button>
+
         <button class="menu-button" onclick="showMessage('フレンドのフレンドの制限を解除します。')">フレフレ無効</button>
         <button class="menu-button" onclick="showMessage('オンラインでもホームボタンを解除できます。')">ホームボタン解除</button>
         <button class="menu-button" onclick="showMessage('声を変更できます。<br>ピッチを調整できます。')">ボイスチェンジャー</button>
         <button class="menu-button" onclick="showMessage('相手に声が聞こえなくなります。')">マイクミュート</button>
-
         <button class="menu-button" onclick="showMessage('ミニゲーム中にスキンを変更することができます。')">ミニゲームスキン変更</button>
+
         <button class="menu-button" onclick="showMessage('一人でもミニゲームを開始できます。')">ミニゲームスタート</button>
         <button class="menu-button" onclick="showMessage('メッセージ画面を開かなくても常に小さい画面で起動させておくことができます。')">メッセージ</button>
         <button class="menu-button" onclick="showMessage('メインメニューへ戻ります。')">メニューに戻る</button>
@@ -347,51 +347,53 @@ a:hover {
         <button class="menu-button" onclick="showMessage('不正クラフトパケットを無効化します。')">クラフトパケット修正</button>
         <button class="menu-button" onclick="showMessage('ダブルハーフブロック関連のフリーズする問題を修正します。')">ダブルハーフ修正</button>
         <button class="menu-button" onclick="showMessage('切断スキンを無効化します。')">ネットワーク保護</button>
-
         <button class="menu-button" onclick="showMessage('ピストンドアでフリーズする問題を解決します。')">ピストンドアバグ無効</button>
+
         <button class="menu-button" onclick="showMessage('存在しない座標やゲーム内でのフリーズする場所へテレポートされた時、フリーズする問題を修正します。')">フリーズTP無効</button>
         <button class="menu-button" onclick="showMessage('タグが沢山付いた矢が当たるとフリーズする問題を修正します。')">フリーズの矢無効</button>
         <button class="menu-button" onclick="showMessage('方角によって召喚しようとするとフリーズする問題を修正します。')">フリーズゴーレム無効</button>
-        
         <button class="menu-button" onclick="showMessage('存在しないヘッドアイテムを見た時、フリーズする問題を修正します。')">フリーズスカル無効</button>
+
         <button class="menu-button" onclick="showMessage('不正なスキンによって、フリーズする問題を修正します。')">フリーズスキン無効</button>
         <button class="menu-button" onclick="showMessage('スポナーからモブ以外のエンティティが召喚されたとき、フリーズする問題を修正します。')">フリーズスポナー無効</button>
         <button class="menu-button" onclick="showMessage('パケットでフリーズする問題を修正します。')">フリーズパケット無効</button>
-
         <button class="menu-button" onclick="showMessage('発射装置を使ってフリーズする問題を修正します。')">フリーズ発射装置無効</button>
+
         <button class="menu-button" onclick="showMessage('魚アイテムで存在しないテクスチャでフリーズする問題を修正します。')">フリーズ魚無効</button>
         <button class="menu-button" onclick="showMessage('ポーションが2個使われる問題を修正します。')">ポーション修正</button>
-
-        <!-- <button class="menu-button" onclick="showMessage('村人との取引における不具合を修正<br>より安定した取引システムの向上')">取引修正</button>
-        <button class="menu-button" onclick="showMessage('アイテムが壊れると材料に戻る機能')">バッククラフト</button> -->
+        <button class="menu-button" onclick="showMessage('村人との取引における不具合を修正<br>より安定した取引システムの向上')">交易パケット修正</button>
     </div>
     <div class="left-panel">
         <button class="menu-button" onclick="showMessage('TNTが爆発したとき、ブロックが破壊されません。')">TNTブロック破壊無効</button>
         <button class="menu-button" onclick="showMessage('ワールド生成時にアンプリファイド地形を生成できます。')">アンプリファイド</button>
         <button class="menu-button" onclick="showMessage('エンチャント内容を合成するときの上限がなくなります。')">エンチャント上限解除</button>
         <button class="menu-button" onclick="showMessage('コンボを設定することができます。<br>コンボを調整できます。')">カスタムコンボ</button>
+        <button class="menu-button" onclick="showMessage('エラーマント対応、フリーズスキン読み込み対応<br>ホスト時の動作安定性向上')">カスタムスキン無効</button>
+        <button class="menu-button" onclick="showMessage('ミニゲーム開始前のカスタムロビー機能<br>・ホスト専用機能<br>・ゲーム開始前の待機時間を自由に設定<br>・プレイヤーが集まるまでロビーで待機可能')">カスタムバトルロビー</button>
         <button class="menu-button" onclick="showMessage('クラフトを無効化できます。')">クラフト無効化</button>
         <button class="menu-button" onclick="showMessage('クリエイティブのアイテム欄からアイテムが取れなくなる。')">クリエイティブ無効化</button>
         <button class="menu-button" onclick="showMessage('クリエイティブでもダメージが入ります。')">クリエ無敵解除</button>
-        <button class="menu-button" onclick="showMessage('隣接している複数のドアを同時に開閉することができます。')">ダブルドア</button>
 
+        <button class="menu-button" onclick="showMessage('隣接している複数のドアを同時に開閉することができます。')">ダブルドア</button>
         <button class="menu-button" onclick="showMessage('デバック棒モジュールを長押しすると専用の棒が手元に上書きされます。<br>専用の棒でアイテムのダメージ値を変更できます。')">デバック棒</button>
+        <button class="menu-button" onclick="showMessage('アイテムが壊れると材料に戻る機能')">バッククラフト</button>
         <button class="menu-button" onclick="showMessage('バックパックモジュールを長押しすると専用のシュルカーボックスが手元に上書きされます。<br>任意(デフォルト:ZR)のボタンを押すことで中身を見ることができます。<br>')">バックパック</button>
         <button class="menu-button" onclick="showMessage('旗やビーコンなどの設置数が制限されているブロックの制限を解除します。')">ブロック上限解除</button>
         <button class="menu-button" onclick="showMessage('ブロックの破壊を無効化します。')">ブロック破壊無効</button>
         <button class="menu-button" onclick="showMessage('ワールドに入れるプレイヤーの数を制限します。<br>上限を制限できます。')">プレイヤー制限</button>
         <button class="menu-button" onclick="showMessage('ポーションの時間を無限にします。')">ポーション時間無限</button>
         <button class="menu-button" onclick="showMessage('ポーションを無効化します。')">ポーション無効</button>
-        <button class="menu-button" onclick="showMessage('モブの上限を解除します。')">モブ上限解除</button>
 
+        <button class="menu-button" onclick="showMessage('開始されたミニゲームに途中から参加可能<br>・ホスト専用機能<br>・ゲーム進行中でも新しいプレイヤーが参加可能<br>・既存のゲームバランスを維持')">ミニゲーム途中参加</button>
+        <button class="menu-button" onclick="showMessage('モブの上限を解除します。')">モブ上限解除</button>
         <button class="menu-button" onclick="showMessage('特定のブロックを一括で破壊できます。<br>範囲を調整できます。<br>プレイヤーの状態を指定できます。<br>原木(wood)、鉱石(ore)、石(stone)、その他(other)を指定できます。<br>破壊したアイテムを自動的にまとめる機能<br>エンチャント（幸運、シルクタッチなど）への完全対応')">一括破壊</button>
         <button class="menu-button" onclick="showMessage('シュルカーボックスの中にシュルカーボックスを入れることができます。')">入れ子シュルカー</button>
         <button class="menu-button" onclick="showMessage('エンティティに卵を当てるとダメージが通ります。')">卵ダメージ</button>
         <button class="menu-button" onclick="showMessage('左手の制限を解除します。')">左手制限解除</button>
         <button class="menu-button" onclick="showMessage('階段やハーフブロックを見ながら腕を振ると、座ることができます。')">椅子プラグイン</button>
         <button class="menu-button" onclick="showMessage('看板コマンドが適応されます。<br><br>看板コマンドの主な情報<br>看板を使用することで細かな設定を追加することができます。<br>現在導入予定なコマンド内容はこちらです。<br>EffectCommand  <br>GameModeCommand  <br>GiveCommand  <br>HealthCommand  <br>HungerCommand  <br>KillCommand  <br>PortalCommand  <br>SayCommand  <br>SetBlockCommand  <br>TPCommand  <br><br>最初にスラッシュ( / )を付けることでコマンドを実行することが可能です。<br>(例) /tp ~~~ ~~~ <br>詳しくはモジュールを長押しすると確認することが可能となります。<br><br>しゃがみながら看板をクリックすると、看板の編集ができます。')">看板コマンド</button>
+        
         <button class="menu-button" onclick="showMessage('自分のワールドにいる全プレイヤーが「看板コマンド」を使用可能になります。')">看板編集プラグイン</button>
-
         <button class="menu-button" onclick="showMessage('耐久力を無限にします。')">耐久力無限</button>
         <button class="menu-button" onclick="showMessage('転落の花火のように横に飛ばすことができます。')">転落の花火</button>
         <button class="menu-button" onclick="showMessage('エンティティに釣り竿をひっかけた時にダメージを通します。')">釣り竿ダメージ</button>
@@ -399,8 +401,6 @@ a:hover {
         <button class="menu-button" onclick="showMessage('エンティティに雪玉を当てるとダメージが通ります。')">雪玉ダメージ</button>
         <button class="menu-button" onclick="showMessage('雪玉を飛ばすと爆発します。<br>雪玉が地面に着くまでか指定できます。')">雪玉爆発</button>
         <button class="menu-button" onclick="showMessage('飛び道具で当たったブロックが破壊されます。')">飛び道具で破壊</button>
-        <button class="menu-button" onclick="showMessage('ミニゲーム開始前のカスタムロビー機能<br>・ホスト専用機能<br>・ゲーム開始前の待機時間を自由に設定<br>・プレイヤーが集まるまでロビーで待機可能')">カスタムバトルロビー</button>
-        <button class="menu-button" onclick="showMessage('開始されたミニゲームに途中から参加可能<br>・ホスト専用機能<br>・ゲーム進行中でも新しいプレイヤーが参加可能<br>・既存のゲームバランスを維持')">ミニゲーム途中参加</button>
         </div>
 
   <div class="right-panel">
