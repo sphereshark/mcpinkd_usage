@@ -664,45 +664,50 @@
 
 <script>
   // 説明文を表示する
-  function showMessage(lang, msg) {
-    document.getElementById("messageBox-" + lang).innerHTML = msg;
+  function showMessage(msg) {
+    // 現在表示されているセクション（ja か en）を判定してメッセージを表示
+    var lang = (document.getElementById('ja-section').style.display !== 'none') ? 'ja' : 'en';
+    var box = document.getElementById("messageBox-" + lang);
+    if (box) {
+      box.innerHTML = msg;
+    }
   }
 
   // タブを切り替える
   function switchTab(lang, index) {
-    const section = document.getElementById(lang + '-section');
-    const panels = section.getElementsByClassName("left-panel");
-    const tabs = section.getElementsByClassName("tab-button");
+    var section = document.getElementById(lang + '-section');
+    var panels = section.getElementsByClassName("left-panel");
+    var tabs = section.getElementsByClassName("tab-button");
     
-    for (let i = 0; i < panels.length; i++) {
+    for (var i = 0; i < panels.length; i++) {
       if (i === index) {
-        panels[i].classList.add("active");
-        tabs[i].classList.add("active");
+        panels[i].className = "left-panel active";
+        tabs[i].className = "tab-button active";
       } else {
-        panels[i].classList.remove("active");
-        tabs[i].classList.remove("active");
+        panels[i].className = "left-panel";
+        tabs[i].className = "tab-button";
       }
     }
   }
 
   // 言語を切り替える
   function setLanguage(lang) {
-    const jaSection = document.getElementById('ja-section');
-    const enSection = document.getElementById('en-section');
-    const btnJa = document.getElementById('btn-ja');
-    const btnEn = document.getElementById('btn-en');
+    var jaSection = document.getElementById('ja-section');
+    var enSection = document.getElementById('en-section');
+    var btnJa = document.getElementById('btn-ja');
+    var btnEn = document.getElementById('btn-en');
 
     if (lang === 'ja') {
       jaSection.style.display = 'block';
       enSection.style.display = 'none';
-      btnJa.classList.add('active');
-      btnEn.classList.remove('active');
+      btnJa.className = 'active';
+      btnEn.className = '';
       document.documentElement.lang = "ja";
     } else {
       jaSection.style.display = 'none';
       enSection.style.display = 'block';
-      btnJa.classList.remove('active');
-      btnEn.classList.add('active');
+      btnJa.className = '';
+      btnEn.className = 'active';
       document.documentElement.lang = "en";
     }
   }
